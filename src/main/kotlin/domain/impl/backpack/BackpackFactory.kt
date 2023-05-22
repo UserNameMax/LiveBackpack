@@ -11,7 +11,7 @@ class BackpackFactory(val weight: Int, val staf: List<Staf>) : ObjectFactory {
         val correctStaf = staf.filter { it.weight<=weight }
         val r = Random
         if (correctStaf.isEmpty()){
-            throw Exception("Купи рюкзак побольше")
+            return listOf()
         }
         for (i in 0..5) {
             val firstStaf = listOf(correctStaf[r.nextInt(0, correctStaf.size)])

@@ -20,7 +20,7 @@ data class Backpack(
                 otherStaf.remove(staf)
                 staf
             } else listOf()
-            return copy(staf = staf + second.staf - addingStaf, insideStaf = commonStaf + addingStaf)
+            return copy(staf = staf, insideStaf = commonStaf + addingStaf)
         }
         throw NotImplementedException("Not Implemented")
     }
